@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E95BBFD3-81E5-4A4E-9460-356929A08FB4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>sean2jsbindings</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SEAN2JSBINDINGS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SEAN2JSBINDINGS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\dwn\liquidfun\liquidfun\Box2D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Collision\b2CollisionJsBindings.h" />
+    <ClInclude Include="Collision\Shapes\b2ChainShapeJsBindings.h" />
+    <ClInclude Include="Collision\Shapes\b2CircleShapeJsBindings.h" />
+    <ClInclude Include="Collision\Shapes\b2EdgeShapeJsBindings.h" />
+    <ClInclude Include="Collision\Shapes\b2PolygonShapeJsBindings.h" />
+    <ClInclude Include="Dynamics\b2BodyJsBindings.h" />
+    <ClInclude Include="Dynamics\b2FixtureJsBindings.h" />
+    <ClInclude Include="Dynamics\b2WorldJsBindings.h" />
+    <ClInclude Include="Dynamics\Contacts\b2ContactJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2DistanceJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2FrictionJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2GearJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2JointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2MotorJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2MouseJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2PrismaticJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2PulleyJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2RevoluteJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2RopeJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2WeldJointJsBindings.h" />
+    <ClInclude Include="Dynamics\Joints\b2WheelJointJsBindings.h" />
+    <ClInclude Include="Particle\b2ParticleGroupJsBindings.h" />
+    <ClInclude Include="Particle\b2ParticleSystemJsBindings.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Collision\b2CollisionJsBindings.cpp" />
+    <ClCompile Include="Collision\Shapes\b2ChainShapeJsBindings.cpp" />
+    <ClCompile Include="Collision\Shapes\b2CircleShapeJsBindings.cpp" />
+    <ClCompile Include="Collision\Shapes\b2EdgeShapeJsBindings.cpp" />
+    <ClCompile Include="Collision\Shapes\b2PolygonShapeJsBindings.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Dynamics\b2BodyJsBindings.cpp" />
+    <ClCompile Include="Dynamics\b2FixtureJsBindings.cpp" />
+    <ClCompile Include="Dynamics\b2WorldJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Contacts\b2ContactJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2DistanceJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2FrictionJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2GearJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2JointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2MotorJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2MouseJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2PrismaticJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2PulleyJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2RevoluteJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2RopeJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2WeldJointJsBindings.cpp" />
+    <ClCompile Include="Dynamics\Joints\b2WheelJointJsBindings.cpp" />
+    <ClCompile Include="Particle\b2ParticleGroupJsBindings.cpp" />
+    <ClCompile Include="Particle\b2ParticleSystemJsBindings.cpp" />
+    <ClCompile Include="sean2jsbindings.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Box2D\Box2D.vcxproj">
+      <Project>{14fa8548-594f-41fc-8999-e9544c7cdf67}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
